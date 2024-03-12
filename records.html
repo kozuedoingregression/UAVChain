@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="styles/login.css">
+  <script src="javascript/login.js" defer></script>
+  <title>UAV Chain</title>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+      <ul id="menu">
+        <li><a class="navv" href="index.html">Home</a></li>
+        <li><a class="navv" href="records.html">Records</a></li>
+        <li><a class="navv" href="register.html">Register</a></li>
+        <li><a class="navv" href="features.html">Features</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div style="display: flex; justify-content: center;">
+    <div class="card">
+      <div class="title">
+        <p class="heading">Hey!, [Username]</p>
+        <p class="desc">[Wallet Address]</p>
+      </div>
+        <div class="color chinese-black">
+          chinese-black
+          <span class="hex">#141414</span>
+        </div>
+        <div class="color chinese-black">
+          chinese-black
+          <span class="hex">#141414</span>
+        </div>
+        <div class="color chinese-black">
+          chinese-black
+          <span class="hex">#141414</span>
+        </div>
+        <div class="color chinese-black">
+          chinese-black
+          <span class="hex">#141414</span>
+        </div>
+      </div>
+  </div>
+  <!-- <section class="head">
+        
+        <p1 class="q1">Please enter the <span class="key">patient id </span>in order <br>to access the patient
+            account.<br><br></p1>
+    </section>
+    <section class="head2">
+        <p2 class="q2">Enter 1003 for a demo <br><br></p2>
+    </section> 
+    <section class="head2">
+        <input id="keyvalue" class="key-input" type="text" placeholder="Enter pid">
+        <div class="button-container">
+            <a href="login.html"><button id="loginbutton" class="button" >See Records</button></a>
+        </div>
+    </section>
+    <br>
+        1695198 
+    <section class="head2">
+        <p2 id="status" class="q2">Generate your <a href="register.html">pid</a> or click on this demo <a style="cursor: pointer;" id="demo">pid</a></p2>
+    </section> -->
+
+  <!-- <footer class="footer">
+        <p>&copy; 2023 Electronic Health Records | Developed By 
+        <a href="https://twitter.com/_znecro" target="_blank"><img src="twitter-x.svg" alt="Bootstrap Logo"></a></p>
+    </footer> -->
+</body>
+<script>
+  function toggleMenu() {
+    var menu = document.getElementById("menu");
+    menu.classList.toggle("active");
+  }
+  setTimeout(function () {
+    document.querySelector(".key").classList.add("blue");
+  }, 1000);
+
+</script>
+
+</html>
