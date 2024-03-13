@@ -159,7 +159,7 @@ async function accessrecord() {
 		let data1 = await uavchain.govlist(i);
 		if (data1.pid == wa) {
 			console.log(data1.UserName, data1.specs.UAVType);
-			uavList.innerHTML = '<div class="color chinese-black">'+ data1.specs.UAVType +'<span class="hex">'+ data1.specs.ModelNum +'</span> </div>';
+			uavList.innerHTML += '<div class="color chinese-black">'+ data1.specs.UAVType +'<span class="hex">'+ data1.specs.ModelNum +'</span> </div>';
 		}
 	}
 

@@ -153,7 +153,7 @@ async function accessrecord() {
         e1.innerText = "This page is for authorised party only";
         let data1 = await uavchain.govlist(i);
         console.log(data1.UserName, data1.specs.UAVType);
-        uavList.innerHTML = '<div class="color chinese-black">'+"Name: "+ data1.UserName +"<br><br>"+"UAV Type: " + data1.specs.UAVType +"<br><br>"+"OME Code: "+ data1.specs.OME+ '<span class="hex">'+"Address: " + data1.pid +"<br>"+"Model Number: "+data1.specs.ModelNum + "<br>"+"Serial Number: "+ data1.specs.SerialNum+'</span> </div>';
+        uavList.innerHTML += '<div class="color chinese-black">'+"Name: "+ data1.UserName +"<br><br>"+"UAV Type: " + data1.specs.UAVType +"<br><br>"+"OME Code: "+ data1.specs.OME+ '<span class="hex">'+"Address: " + data1.pid +"<br>"+"Model Number: "+data1.specs.ModelNum + "<br>"+"Serial Number: "+ data1.specs.SerialNum+'</span> </div>';
         }
     }
 }
