@@ -1,6 +1,6 @@
 body {
     background-color: #fff;
-    color: #fff;
+    color: 000;
     font-family: 'Open Sans', sans-serif;
     margin: 0;
     padding: 0;
@@ -32,6 +32,10 @@ body {
     color: #1b1b1b;
   }
   
+  #wa{
+    color:#5a5a5a
+  }
+
   .heading {
     font-weight: bold;
     /* letter-spacing: 7px; */
@@ -76,10 +80,75 @@ body {
   }
   
   .eerie-black {
-    background: var(--ch-black);
-    color: var(--ch-white);
+    margin-left: 25%;
+    background: var(--ch-white);
+    color: var(--ch-black);
+    width: 200px;
+    height: 10px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-left-radius: 5px;
   }
   
+  .button {
+    position: relative;
+    width: 150px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border: 1px solid #34974d;
+    background-color: #3aa856;
+  }
+  
+  .button, .button__icon, .button__text {
+    transition: all 0.3s;
+  }
+  
+  .button .button__text {
+    transform: translateX(30px);
+    color: #fff;
+    font-weight: 600;
+  }
+  
+  .button .button__icon {
+    position: absolute;
+    transform: translateX(109px);
+    height: 100%;
+    width: 39px;
+    background-color: #34974d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .button .svg {
+    width: 30px;
+    stroke: #fff;
+  }
+  
+  .button:hover {
+    background: #34974d;
+  }
+  
+  .button:hover .button__text {
+    color: transparent;
+  }
+  
+  .button:hover .button__icon {
+    width: 148px;
+    transform: translateX(0);
+  }
+  
+  .button:active .button__icon {
+    background-color: #2e8644;
+  }
+  
+  .button:active {
+    border: 1px solid #2e8644;
+  }
+
   .chinese-black {
     background: var(--eer-black);
     color: var(--ch-white);
@@ -255,17 +324,7 @@ li {
 
 }
 
-.button {
-    background-color: #1a1a1a;
-    color: #fff;
-    padding: 15px 30px;
-    position: relative;
-    /* margin-left: 300px; */
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
+
 
 .key-input {
     margin: 20px;
@@ -273,10 +332,6 @@ li {
     height: 25px;
 }
 
-.button:hover {
-    background-color: #252525;
-    font-size: 19px;
-}
 
 .footer {
     background-color: #1a1a1a;

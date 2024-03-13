@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js" type="application/javascript"></script>
+    <link rel="stylesheet" href="styles/register.css">
+    <script src="scripts/register.js" defer></script>
+    <title>Register</title>
+</head>
+<body>
+    <div>
+    <form class="form">
+        <p class="title">Register your drone</p>
+        <p class="message">User Details</p>
+        <label>
+            <input id="name1" required="" placeholder="Full Name" type="text" class="input">
+        </label> 
+                
+        <label>
+            <input id="pan1" required="" placeholder="PAN" type="text" class="input">            
+        </label> 
+            
+        <label>
+            <input id="phno1" required="" placeholder="Phone Number" type="text" class="input">
+        </label>
+        <label>
+            <input id="location1" required="" placeholder="Loaction" type="text" class="input">
+        </label>
+        <p class="message">Drone Details</p>
+        <label>
+            <input id="dronetype1" required="" placeholder="Drone Type" type="text" class="input">            
+        </label> 
+            
+        <label>
+            <input id="modelno1" required="" placeholder="Model Number" type="text" class="input">
+        </label>
+        <label>
+            <input id="serialno1" required="" placeholder="SerialNum" type="text" class="input">
+        </label>
+        <label>
+            <input id="ome1" required="" placeholder="OME" type="text" class="input">
+        </label>
+        <label>
+            <input id="npl1" required="" placeholder="NPL" type="text" class="input">
+        </label>
+        
+    </form>
+    
+        <button onclick="registerUav()" class="submit" >Submit</button>
+    </div>
+</body>
+</html>

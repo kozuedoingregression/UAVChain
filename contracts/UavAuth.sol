@@ -26,7 +26,7 @@ contract UavAuth {
     }
 
     UserDetails[] public govlist;
-    mapping(address => UserDetails) public Users;
+    //mapping(address => UserDetails) public Users;
 
     function registerUser(
         string memory _username,
@@ -54,38 +54,38 @@ contract UavAuth {
             _location,
             newspecs
         );
-        Users[msg.sender] = newuser;
+        //Users[msg.sender] = newuser;
         govlist.push(newuser);
     }
 
-    function getuser(address _wa)
-        public
-        view
-        returns (
-            string memory,
-            string memory,
-            string memory,
-            string memory,
-            string memory,
-            string memory,
-            string memory,
-            string memory,
-            string memory
-        )
-    {
-        UserDetails memory user = Users[_wa];
+    // function getuser(address _wa)
+    //     public
+    //     view
+    //     returns (
+    //         string memory,
+    //         string memory,
+    //         string memory,
+    //         string memory,
+    //         string memory,
+    //         string memory,
+    //         string memory,
+    //         string memory,
+    //         string memory
+    //     )
+    // {
+    //     UserDetails memory user = Users[_wa];
 
-        return (
-            user.UserName,
-            user.PAN,
-            user.phNo,
-            user.location,
-            user.specs.UAVType,
-            user.specs.ModelNum,
-            user.specs.SerialNum,
-            user.specs.OME,
-            user.specs.NPL
-        );
-    }
+    //     return (
+    //         user.UserName,
+    //         user.PAN,
+    //         user.phNo,
+    //         user.location,
+    //         user.specs.UAVType,
+    //         user.specs.ModelNum,
+    //         user.specs.SerialNum,
+    //         user.specs.OME,
+    //         user.specs.NPL
+    //     );
+    // }
 }
 
