@@ -148,12 +148,11 @@ async function accessrecord() {
     const wa = await signer.getAddress();
 
     for (let i = 0; i < 10; i++) {
-        if(wa == "0x7802692941833D8B73D60Ff41bD5370A6C9E5aC1")
-        {
-        e1.innerText = "This page is for authorised party only";
-        let data1 = await uavchain.govlist(i);
-        console.log(data1.UserName, data1.specs.UAVType);
-        uavList.innerHTML += '<div class="color chinese-black">'+"Name: "+ data1.UserName +"<br><br>"+"UAV Type: " + data1.specs.UAVType +"<br><br>"+"OME Code: "+ data1.specs.OME+ '<span class="hex">'+"Address: " + data1.pid +"<br>"+"Model Number: "+data1.specs.ModelNum + "<br>"+"Serial Number: "+ data1.specs.SerialNum+'</span> </div>';
+        if (wa == "0x7802692941833D8B73D60Ff41bD5370A6C9E5aC1" ) {
+            e1.innerText = "This page is for authorised party only";
+            let data1 = await uavchain.govlist(i);
+            console.log(data1.UserName, data1.specs.UAVType);
+            uavList.innerHTML += '<div class="color chinese-black">' + "Name: " + data1.UserName + "<br><br>" + "UAV Type: " + data1.specs.UAVType + "<br><br>" + "OME Code: " + data1.specs.OME + '<span class="hex">' + "Address: " + data1.pid + "<br>" + "Model Number: " + data1.specs.ModelNum + "<br>" + "Serial Number: " + data1.specs.SerialNum + '</span> </div>';
         }
     }
 }

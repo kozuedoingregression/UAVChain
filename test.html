@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <input id="a" placeholder="">
+        <input id="b" placeholder="">
+        <input id="c" placeholder="">
+        <input id="d" placeholder="">
+        <button onclick="calculate()" >calculate</button>
+
+        <script>
+            function pointInPolygon(point, polygon) {
+                var x = point[0], y = point[1];
+                var inside = false;
+                for (var i = 0, j = polygon.length - 1; i < polygon.length; j = i++) {
+                    var xi = polygon[i][0], yi = polygon[i][1];
+                    var xj = polygon[j][0], yj = polygon[j][1];
+                    
+                    var intersect = ((yi > y) != (yj > y)) && (x < (xj - xi) * (y - yi) / (yj - yi) + xi);
+                    if (intersect) inside = !inside;
+                }
+                return inside;
+            }
+            
+
+            function calculate(){
+        
+                const polygon=[[30.36233686955265, 78.04116358872932],[30.358078403025033, 78.04768672107994],
+                [30.35474556077172, 78.04232230302843],[30.359596660183893, 78.03670039291046]];
+                const point=[30.355486202195934, 78.03845992203136];
+
+                console.log(pointInPolygon(point, polygon));
+            }
+            
+        </script>
+    </body>
+</html>

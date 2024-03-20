@@ -126,13 +126,12 @@ const UavChainABI = [
 ];
 const UavChainAddress = "0x204130eea1a80d5c71e6d25ecab1d1c1ee8793cc";
 
-async function registerUav()
-{
+async function registerUav() {
 	const provider = new ethers.providers.Web3Provider(window.ethereum);
 	const signer = provider.getSigner();
 
-    const name = document.getElementById("name1");
-    const pan = document.getElementById("pan1");
+	const name = document.getElementById("name1");
+	const pan = document.getElementById("pan1");
 	const phno = document.getElementById("phno1");
 	const location = document.getElementById("location1");
 	const dronetype = document.getElementById("dronetype1");
@@ -141,7 +140,7 @@ async function registerUav()
 	const ome = document.getElementById("ome1");
 	const npl = document.getElementById("npl1");
 
-	const uavchain = new ethers.Contract(UavChainAddress,UavChainABI,provider);
-	const user = await uavchain.connect(signer).registerUser(name.value,pan.value,phno.value,location.value,dronetype.value,modelno.value,serialno.value,ome.value,npl.value);
+	const uavchain = new ethers.Contract(UavChainAddress, UavChainABI, provider);
+	const user = await uavchain.connect(signer).registerUser(name.value, pan.value, phno.value, location.value, dronetype.value, modelno.value, serialno.value, ome.value, npl.value);
 	await user.wait();
 }
