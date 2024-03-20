@@ -148,20 +148,21 @@ async function accessrecord() {
 	// console.log(wa);
 	// console.log(data.UserName)
 	//const len = govlist.
-	if (data.pid == wa) {
 
-		e1.innerText = "Hey! " + data.UserName;
-	}
-	else {
-		e1.innerText = "Register your drone";
-	}
 	for (let i = 0; i < 10; i++) {
 		let data1 = await uavchain.govlist(i);
 		if (data1.pid == wa) {
+		e1.innerText = "Hey! " + data.UserName;
+	
+
 			console.log(data1.UserName, data1.specs.UAVType);
 			uavList.innerHTML += '<div class="color chinese-black">'+ data1.specs.UAVType +'<span class="hex">'+ data1.specs.ModelNum +'</span> </div>';
 		}
+		else {
+		e1.innerText = "Register your drone";
 	}
+	}
+	
 
 
 
